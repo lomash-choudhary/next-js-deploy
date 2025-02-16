@@ -27,5 +27,7 @@ jobs:
             pwd
             cd next-js-deploy
             git pull
-            which npm
-            which pm2
+            /root/.nvm/versions/node/v22.9.0/bin/npm install
+            /root/.nvm/versions/node/v22.9.0/bin/npm run build
+            /root/.nvm/versions/node/v22.9.0/bin/npm run start
+            pm2 start all
