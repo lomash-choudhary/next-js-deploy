@@ -41,4 +41,4 @@ jobs:
             npm install
             npm run build
             pm2 stop all || true
-            pm2 start
+            pm2 start npm --name "next-app" run build
