@@ -22,4 +22,5 @@ jobs:
           key: ${{ secrets.PRIVATESSHKEY }}
           passphrase: ${{ secrets.PARAPHRASE }}
           port: 22
-          script: whoami
+          script: |
+            ls 
