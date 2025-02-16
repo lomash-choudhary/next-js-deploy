@@ -23,16 +23,7 @@ jobs:
           passphrase: ${{ secrets.PARAPHRASE }}
           port: 22
           script: |
-            export NVM_DIR="$HOME/.nvm"
-            [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-            [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
-            nvm use node
-            
-            echo "Node Version:"
-            node -v
-            echo "NPM Version:"
-            npm -v
-
+            ls
             cd next-js-deploy
             git pull
             npm install
