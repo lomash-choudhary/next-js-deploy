@@ -26,11 +26,8 @@ jobs:
             export NVM_DIR="$HOME/.nvm"
             [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
             [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
-            
-            # Explicitly set Node.js version
             nvm use node
-            export PATH="$NVM_DIR/versions/node/$(nvm current)/bin:$PATH"
-
+            
             echo "Node Version:"
             node -v
             echo "NPM Version:"
@@ -40,13 +37,4 @@ jobs:
             git pull
             npm install
             npm run build
-
-            # Ensure PM2 is running
-            if ! command -v pm2 &> /dev/null; then
-                npm install -g pm2
-            fi
-
-            # Restart app using PM2
-            pm2 stop all || true
-            pm2 start npm --name "next-app" -- run start
-            pm2 save
+            npm run start
