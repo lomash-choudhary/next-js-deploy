@@ -28,5 +28,6 @@ jobs:
             cd next-js-deploy
             git pull
             npm install
-            npm build
+            npm run build
+            npm run start
             pm2 start all
