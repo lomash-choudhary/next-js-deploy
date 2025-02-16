@@ -23,6 +23,8 @@ jobs:
           passphrase: ${{ secrets.PARAPHRASE }}
           port: 22
           script: |
+            ls
+            pwd
             cd next-js-deploy
             git pull
             npm install
