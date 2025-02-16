@@ -12,7 +12,7 @@ export default function Home() {
             Unlock your potential with our expert-led courses
           </p>
           <Link
-            href="/courses"
+            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
             className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition"
           >
             Explore Courses
