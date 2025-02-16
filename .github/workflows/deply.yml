@@ -27,7 +27,5 @@ jobs:
             pwd
             cd next-js-deploy
             git pull
-            npm install
-            npm run build
-            npm run start
-            pm2 start all
+            which npm
+            which pm2
