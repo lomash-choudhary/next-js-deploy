@@ -23,4 +23,8 @@ jobs:
           passphrase: ${{ secrets.PARAPHRASE }}
           port: 22
           script: |
-            ls
+            cd next-js-deploy
+            git pull
+            npm install
+            npm build
+            pm2 start all
